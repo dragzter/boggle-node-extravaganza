@@ -19,7 +19,11 @@
   	client.on('messages', function(data){
   		client.emit('thread', data);
   		client.broadcast.emit('thread', data);
-  	});
+    });
+    
+    client.on('start_timer', function (data) {
+      //testing
+    });
   });
 
   server.listen(3000);
